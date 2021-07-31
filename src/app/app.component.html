@@ -1,0 +1,64 @@
+<p>
+    <mat-label style="margin: 8px;">Item:</mat-label>
+</p>
+
+<p class="grau">
+    <mat-form-field style="margin: 8px;">
+        <mat-label>Result</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field>
+        <ngx-mat-search-field placeholder="item" prefetch="false" [maxRows]="5" [dataSource]="searchFieldDataSource">
+        </ngx-mat-search-field>
+    </mat-form-field>
+</p>
+
+<span *ngFor="let ingrediant of ingrediantcount; let i = index">
+  <p class="grau" style="margin-bottom: 0px; margin-top: 0px;" >
+    <mat-form-field style="position: 8px;">
+      <ngx-mat-search-field placeholder="Ingrediant" prefetch="false" [maxRows]="5" [dataSource]="searchFieldDataSource" >
+      </ngx-mat-search-field>
+    </mat-form-field>
+    
+    <button (click)="remove(i)" class="times">X </button>
+    <mat-form-field tyle="margin-left: 8px;">
+      <mat-label>Amount</mat-label>
+      <input type="number" matInput placeholder="160" value="">
+    </mat-form-field>
+  </p>
+</span>
+
+<button class="add" (click)="add()">+ </button>
+
+
+<p>
+    <mat-label tyle="margin-left: 8px;">Requerments:</mat-label>
+</p>
+<p class="grau">
+    <mat-form-field>
+        <mat-label>Collection</mat-label>
+        <mat-select>
+            <mat-option></mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field style="margin-left: 8px;">
+        <mat-label>lvl</mat-label>
+        <input type="number" matInput placeholder="1-X" value="">
+    </mat-form-field>
+
+</p>
+<p class="grau">
+    <mat-form-field>
+        <mat-label>Skill</mat-label>
+        <mat-select>
+            <mat-option></mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field tyle="margin-left: 8px;">
+        <mat-label>lvl</mat-label>
+        <input class="nummerin" type="number" matInput placeholder="1-60" value="" sty>
+    </mat-form-field>
+
+</p>
